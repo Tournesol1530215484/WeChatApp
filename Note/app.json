@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/todos/todos",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#0cbf59",
+    "navigationBarTitleText": "印象笔记",
+    "navigationBarTextStyle":"white"
+  }
+}

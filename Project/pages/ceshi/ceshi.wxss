@@ -1,0 +1,6 @@
+/* pages/ceshi/ceshi.wxss */
+
+/* text测试时的修饰 */
+.clicking{
+    background: rebeccapurple;
+}

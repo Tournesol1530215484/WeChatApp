@@ -1,0 +1,55 @@
+{
+  "pages":[
+    "pages/content/content",
+    "pages/vidio/vidio",  
+    "pages/img/img", 
+    "pages/text/text",
+    "pages/index/index",
+    "pages/jingxuan/jingxuan",
+    "pages/about/about",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ffcc33",
+    "navigationBarTitleText": "糗事百科",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+      "list":[
+          {
+            "pagePath": "pages/jingxuan/jingxuan",
+            "text":"精选",
+            "iconPath":"/images/bb.png",
+            "selectedIconPath":"/images/bbs.png"
+          },
+        {
+            "pagePath": "pages/vidio/vidio",
+            "text":"视频",
+            "iconPath": "/images/video.png",
+            "selectedIconPath": "/images/videos.png"
+        },
+        {
+            "pagePath": "pages/text/text",
+            "text": "文字",
+            "iconPath": "/images/font.png",
+            "selectedIconPath": "/images/fonts.png"
+        },
+        {
+            "pagePath": "pages/img/img",
+            "text": "图片",
+            "iconPath": "/images/img.png",
+            "selectedIconPath": "/images/imgs.png"
+        },
+        {
+            "pagePath": "pages/about/about",
+            "text": "我的",
+            "iconPath": "/images/me.png",
+            "selectedIconPath": "/images/mes.png"
+        }
+      ],
+      "borderStyle":"white",
+      "color":"#000000",
+      "selectedColor":"#ffcc33"
+  }
+}

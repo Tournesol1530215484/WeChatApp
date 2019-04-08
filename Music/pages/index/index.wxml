@@ -1,0 +1,312 @@
+<!--index.wxml-->
+<view class='page'>
+    <!-- search begin -->
+    <view class='search'>
+        <view class='search-left'>
+            <image  src='../../images/search.png'></image>
+            <input type='text'   placeholder="影子爱人"></input>
+        </view>
+        <view class='search-right'>
+            <view class='clock'>
+                <view class='clock-img'>
+                    <icon type='waiting' size='26rpx' color='#ccc'></icon>
+                </view>
+                <view class='clock-txt'>定时</view>
+            </view>
+            <view class='down'>
+                 <view class='clock-img'>
+                     <icon type='download' size='26rpx' color='#ccc'></icon>
+                 </view>
+                <view class='clock-txt'>下载</view>
+            </view>
+        </view>
+    </view>
+    <!-- search end -->
+
+    <!-- nav begin -->
+    <view class='nav'>
+        <view class='nav-check'>
+            <text>推荐</text>
+        </view>
+         <view>
+            <text>精选</text>
+        </view>
+         <view>
+            <text>分类</text>
+        </view>
+         <view>
+            <text>广播</text>
+        </view>
+         <view>
+            <text>我的</text>
+        </view>
+    </view>
+    <!-- nav end -->
+    <!-- center begin -->
+    <view class='center'>
+        <!-- 滑动块 -->
+        <swiper indicator-dots indicator-color="#def754" autoplay interval="3000">
+            <swiper-item class="center-swip">
+                 <image src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640" class="slide-image" />
+            </swiper-item>
+             <swiper-item  class="center-swip">
+                 <image src="https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640" class="slide-image" />
+            </swiper-item>
+             <swiper-item  class="center-swip">
+                 <image src="https://images.unsplash.com/photo-1551446591-142875a901a1?w=640" class="slide-image" />
+            </swiper-item>
+        </swiper>
+
+        <!-- 大分类 -->
+        <view class='cate'>
+            <view class='cate-item'>
+                <view class='cate-img'> 
+                    <image src='../../images/read.png'></image>
+                </view>
+                <view class='cate-text'><text>小说</text></view>
+            </view>
+
+             <view class='cate-item'>
+                <view class='cate-img'> 
+                    <image src='../../images/love.png'></image>
+                </view>
+                <view class='cate-text'><text>情感</text></view>
+            </view>
+
+             <view class='cate-item'>
+                <view class='cate-img'> 
+                    <image src='../../images/music.png'></image>
+                </view>
+                <view class='cate-text'><text>音乐</text></view>
+            </view>
+
+             <view class='cate-item'>
+                <view class='cate-img'> 
+                    <image src='../../images/know.png'></image>
+                </view>
+                <view class='cate-text'><text>知识</text></view>
+            </view>
+
+             <view class='cate-item'>
+                <view class='cate-img'> 
+                    <image src='../../images/live.png'></image>
+                </view>
+                <view class='cate-text'><text>直播</text></view>
+            </view>
+
+             <view class='cate-item'>
+                <view class='cate-img'> 
+                    <image src='../../images/bang.png'></image>
+                </view>
+                <view class='cate-text'><text>榜单</text></view>
+            </view>
+
+             <view class='cate-item'>
+                <view class='cate-img'> 
+                    <image src='../../images/run.png'></image>
+                </view>
+                <view class='cate-text'><text>跑步</text></view>
+            </view>
+
+             <view class='cate-item'>
+                <view class='cate-img'> 
+                    <image src='../../images/listen.png'></image>
+                </view>
+                <view class='cate-text'><text>随声听</text></view>
+            </view>
+        </view>
+    <!-- 电台列表 -->
+    <view class='song'>
+        <view class='song-tiitle'>
+            <text>本次为您推荐了2首歌</text>
+            <image src='../../images/rnew.png'></image>
+        </view>
+        <view class='song-list'>
+            <scroll-view scroll-y style="height:368rpx " >
+                <view class='song-cent'>
+                    <view class='song-left'>
+                        <image src='../../images/mv1.jpg'></image>
+                    </view>
+                    <view class='song-right'>
+                        <view class='s-top'>
+                            <text>陪你上下班一起听歌</text>
+                        </view>
+                        <view class='s-mid'>
+                            <image src='../../images/start.png'></image>
+                            <image src='../../images/start.png'></image>
+                            <image src='../../images/start.png'></image>
+                            <image src='../../images/start.png'></image>
+                            <image src='../../images/start.png'></image>
+                        </view>
+                        <view class='s-foot'>
+                            <view class='sf-left'>
+                                <image src='../../images/mv4.jpg'></image>
+                                <text>一个人听</text>
+                            </view>
+                            <view class='sf-right'>
+                                <image src='../../images/error.png'></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class='song-cent'>
+                    <view class='song-left'>
+                        <image src='../../images/mv2.jpg'></image>
+                    </view>
+                    <view class='song-right'>
+                        <view class='s-top'>
+                            <text>凭什么我们要错过</text>
+                        </view>
+                        <view class='s-mid'>
+                            <image src='../../images/start.png'></image>
+                            <image src='../../images/start.png'></image>
+                            <image src='../../images/start.png'></image>
+                            <image src='../../images/start.png'></image>
+                            <image src='../../images/start.png'></image>
+                        </view>
+                        <view class='s-foot'>
+                            <view class='sf-left'>
+                                <image src='../../images/mv4.jpg'></image>
+                                <text>一个人听</text>
+                            </view>
+                            <view class='sf-right'>
+                                <image src='../../images/error.png'></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class='song-cent'>
+                    <view class='song-left'>
+                        <image src='../../images/mv3.jpg'></image>
+                    </view>
+                    <view class='song-right'>
+                        <view class='s-top'>
+                            <text>爱情来了，我却一无所有</text>
+                        </view>
+                        <view class='s-mid'>
+                            <image src='../../images/start.png'></image>
+                            <image src='../../images/start.png'></image>
+                            <image src='../../images/start.png'></image>
+                            <image src='../../images/start.png'></image>
+                            <image src='../../images/start.png'></image>
+                        </view>
+                        <view class='s-foot'>
+                            <view class='sf-left'>
+                                <image src='../../images/mv4.jpg'></image>
+                                <text>一个人听</text>
+                            </view>
+                            <view class='sf-right'>
+                                <image src='../../images/error.png'></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class='song-cent'>
+                    <view class='song-left'>
+                        <image src='../../images/mv5.jpg'></image>
+                    </view>
+                    <view class='song-right'>
+                        <view class='s-top'>
+                            <text>好好赚钱，人生真的很贵</text>
+                        </view>
+                        <view class='s-mid'>
+                            <image src='../../images/start.png'></image>
+                            <image src='../../images/start.png'></image>
+                            <image src='../../images/start.png'></image>
+                            <image src='../../images/start.png'></image>
+                            <image src='../../images/start.png'></image>
+                        </view>
+                        <view class='s-foot'>
+                            <view class='sf-left'>
+                                <image src='../../images/mv4.jpg'></image>
+                                <text>一个人听</text>
+                            </view>
+                            <view class='sf-right'>
+                                <image src='../../images/error.png'></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class='song-cent'>
+                    <view class='song-left'>
+                        <image src='../../images/mv6.jpg'></image>
+                    </view>
+                    <view class='song-right'>
+                        <view class='s-top'>
+                            <text>成熟的人从不发WeChat</text>
+                        </view>
+                        <view class='s-mid'>
+                            <image src='../../images/start.png'></image>
+                            <image src='../../images/start.png'></image>
+                            <image src='../../images/start.png'></image>
+                            <image src='../../images/start.png'></image>
+                            <image src='../../images/start.png'></image>
+                        </view>
+                        <view class='s-foot'>
+                            <view class='sf-left'>
+                                <image src='../../images/mv4.jpg'></image>
+                                <text>一个人听</text>
+                            </view>
+                            <view class='sf-right'>
+                                <image src='../../images/error.png'></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class='song-cent'>
+                    <view class='song-left'>
+                        <image src='../../images/mv7.jpg'></image>
+                    </view>
+                    <view class='song-right'>
+                        <view class='s-top'>
+                            <text>一辈子很长，别跟这样的人结婚</text>
+                        </view>
+                        <view class='s-mid'>
+                            <image src='../../images/start.png'></image>
+                            <image src='../../images/start.png'></image>
+                            <image src='../../images/start.png'></image>
+                            <image src='../../images/start.png'></image>
+                            <image src='../../images/start.png'></image>
+                        </view>
+                        <view class='s-foot'>
+                            <view class='sf-left'>
+                                <image src='../../images/mv4.jpg'></image>
+                                <text>一个人听</text>
+                            </view>
+                            <view class='sf-right'>
+                                <image src='../../images/error.png'></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+        </view>
+    </view>
+    <!-- center end -->
+    <!-- plear begin -->
+    <view class='play'>
+        <view class='play-left'>
+            <view class=' pl-head'>
+                <image src='../../images/one.jpg'></image>
+            </view>
+            <view class='pl-right'>
+                <view class='pl-ltop'><text>敞开心扉听老歌...</text></view>
+                <view class='pl-lfoot'><text>左右滑动换节目</text></view>
+            </view>
+        </view>
+        
+        <view class='play-right'>
+           <view class='pr-left'>
+                <image src='../../images/play.png'></image>
+           </view>
+           <view class='pr-right'>
+                <image src='../../images/lis.png'></image>
+           </view>
+        </view>
+    </view>
+
+    <!-- plear end -->
+</view>
+
+
