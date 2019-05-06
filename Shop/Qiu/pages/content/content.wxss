@@ -1,0 +1,132 @@
+/* pages/text/text.wxss */
+.list-content{
+    padding: 30rpx;
+}
+.author{
+    margin: 0;
+    padding: 0;
+    display: flex;
+   align-items: center
+
+}
+.author image{
+    height: 100rpx;
+    width: 100rpx;
+    border-radius: 50rpx;
+}
+.author text{
+    font-family: "宋体";
+    color: "#ccc";
+    padding-left: 20rpx;
+}
+
+.content text{
+    font-family: "黑体";
+    font-size: 30rpx;
+    text-indent: 50px;
+    color: #333333;
+}
+
+.comment-text text{
+    /* padding-left: 30rpx; */
+    font-family: "楷体";
+    font-size: 28rpx;
+    color: #666666;
+}
+.comment-img{
+  /* padding-left: 30rpx ; */
+  padding-top: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+.comment-img image{
+    width: 50rpx;
+    height: 50rpx;
+    padding-right: 60rpx;
+}
+.comment-img-left{
+    flex: 2
+}
+
+.new {
+    font-family: "黑体";
+    font-size: 32rpx;
+    padding: 20rpx;
+
+}
+.reback {
+    padding-top: 20rpx;
+    display: flex;
+    flex-direction: row;
+}
+.re-left{
+    flex: 1;
+    padding-left: 30rpx;
+    padding-top: 20rpx;
+
+}
+.re-left image{
+    height: 100rpx;
+    width: 100rpx;
+    border-radius: 50rpx;
+}
+
+.re-right{
+    flex: 4
+}
+.top {
+    display: flex;
+
+}
+.top text{
+        flex: 1;
+        color: #ccc;
+        font-family: "黑体";
+        font-size: 32rpx;
+}
+.top image{
+    padding-right: 50rpx;
+     height: 50rpx;
+    width: 50rpx;
+}
+
+.cent {
+        padding: 5rpx 0rpx;
+        font-family: "黑体";
+        font-size: 32rpx;
+}
+
+.bttom {
+        color: #ccc;
+        padding-top: 10rpx ;
+        font-family: "黑体";
+        font-size: 28rpx;
+}
+
+.reply {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-top: #cccccc solid 2rpx;
+    border-bottom: #cccccc solid 2rpx;
+    margin-top: 20rpx;
+    padding-top: 30rpx;
+    padding-left: 30rpx;
+
+}
+.rel-left {
+    flex: 4;
+    display: flex;
+
+}
+.reply input{
+    width: 80%;
+     padding-left: 40rpx;
+}
+.reply image{
+    width: 50rpx;
+    height: 50rpx;
+}
+.say{
+    font-size: 32rpx;
+}

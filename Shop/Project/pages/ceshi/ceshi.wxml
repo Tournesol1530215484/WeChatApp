@@ -1,0 +1,221 @@
+<!-- pages/ceshi/ceshi.wxml
+<!-- <text>pages/ceshi/ceshi.wxml this is a ceshi</text> -->
+<!-- <view wx:if="{{ obj.age >=22}}">111</view>
+<view wx:elif="{{ obj.age < 22}}">22</view>
+<view wx:else="{{ obj.age }}">33</view> -->
+<!-- <block hidden>
+  <view >111</view>
+</block> -->
+
+<!-- <template name="temp">
+    <view>
+      <text>name:{{ name }}</text>
+       <view>age:{{ age }}</view>
+       <view>age:{{ name }}</view>
+    </view>
+</template> -->
+
+<!-- <template is="temp" data="{{ ...obj }}"/> -->
+<!-- 模板测试 -->
+  <!-- <template name="add">
+    <view>J</view>
+  </template>
+
+  <template name="ou">
+    <view>O</view>
+  </template> -->
+<!-- <block wx:for="{{[1, 2, 3, 4, 5]}}"> -->
+<!-- <block wx:for="{{ arr }}">
+  <template is="{{item % 2 == 0 ? 'add' : 'ou'}}" />
+  <template is="{{  itemName % 2 == 0 ? 'add' : 'ou' }} "  />
+</block> -->
+<!-- <template name="even">
+  <view>even</view>
+</template>
+
+<block wx:for="{{[1, 2, 3, 4, 5]}}">
+  <template is="{{item % 2 == 0 ? 'add' : 'ou'}}" />
+</block> -->
+
+<!-- icon图标测试 -->
+  <!-- <view class="group">
+    <block wx:for="{{icontype}}">
+      <icon type="{{item}}" size="24" ></icon>
+    </block>
+  </view>
+
+  <view>
+    <block wx:for="{{typeSize}}" wx:for-item="typeSize">
+      <icon type='success' size='{{typeSize}}'></icon>
+    </block>
+  </view>
+
+  <view>
+    <block wx:for="{{iconColor}}" wx:for-item="iconColor">
+      <icon color='{{iconColor}}' type='warn'></icon>
+    </block>
+  </view> -->
+
+  <!-- text测试 -->
+  <!-- <view class="btn-area">
+    <view class="body-view">
+        <text>{{textcontent}}</text>
+        <button bindtap='addlin'>Addline</button>
+        <button bindtap='dellin'>Delline</button>
+    </view>
+  </view> -->
+
+  <!-- progress进度条测试 -->
+<!-- <view >
+    <progress percent='80' show-info='ture' border-radius="40rpx" font-size='36rpx'  stroke-width="40rpx" activeColor='red'  backgroundColor='green' active='ture'></progress>
+</view> -->
+
+<!-- button组件 -->
+<!-- <view class='btn-test'>
+    <button 
+        type='default' 
+        size='{{ primarySize }}'  
+        loading="{{ loading }}"  
+        plain="{{ plain }}" 
+        hover-class='clicking' 
+        disabled="{{disabled}}">
+        点击 
+    </button>
+    <button
+        type='warn'  
+        size='{{ primarySize }}'  
+        loading="{{ loading }}"  
+        plain="{{ plain }}" 
+        hover-class='clicking' 
+        disabled="{{disabled}}">
+        点击
+    </button>
+    <button
+         type='primary'  
+         size='{{ primarySize }}'  
+        loading="{{ loading }}"  
+        plain="{{ plain }}" 
+        hover-class='clicking' 
+        disabled="{{ disabled }}">
+        点击
+    </button>
+    <button bindtap='SetDefault'>SetDefault</button>
+    <button bindtap='Setwarn'>Setwarn</button>
+    <button bindtap='Setprimary'>Setprimary</button>
+</view> -->
+
+<!-- checkbox组件 -->
+<!-- <checkbox-group bindchange="checkboxChange">
+    <label class='checkbox' wx:for='{{items}}'>
+        <checkbox value='{{items.name}}' checked='{{items.checked}}'>{{ item.value }}</checkbox>
+    </label>
+</checkbox-group> -->
+
+<!-- input组件 -->
+<!-- <view class="selection">
+    <input placeholder='这是一个可以自动聚焦的input'  focus></input>
+    <input type='digit' placeholder="带小数点的键盘"></input>
+    <input type='idcard' placeholder='省份证输入'></input>
+    <input type='password'></input>
+    <input type='number'></input>
+    <input placeholder-style='color:red ;font-family:"楷体"' placeholder='变颜色'> </input>
+</view> -->
+
+<!-- label组件 -->
+<!-- <view>
+    <view>表单组件在label内 </view>
+    <checkbox-group class="group" bindchange="checkboxChange">
+        <view class='label-1' wx:for="{{items}}" wx:for-item="wxitems">
+            <label>
+                <checkbox hidden value="{{ wxitems.name }}" checked='{{ wxitems.checked }}'></checkbox>
+                <view class='label-1-icon'>
+                    <view 
+                    class='label-1__icon-checked' style='opacity:{{wxitems.checked ? 1 : 0}}'></view>
+                </view>
+                <text class="label-1__text"> {{ wxitems.value }}</text>
+            </label>
+        </view>
+
+    </checkbox-group>
+</view> -->
+
+
+<!-- pick组件 -->
+
+<!-- <view>
+    <view>普通选择器</view>
+    <picker mode="selector"  bindchange='checkboxChange' value='{{index}}' range='{{array}}' >
+    <text >当前选择的是：{{array[index]}}</text>
+    </picker>
+
+    <view>时间data选择器</view>
+    <picker mode="date" value='{{data}}' start="{{start}}" end="{{ end}}" bindchange="databindChange" > 
+     <text >当前的时间是：{{data}}</text>
+    </picker>
+
+    <view>时间time选择器</view>
+    <picker mode="time" value='{{time}}' start="{{start}}" end="{{ end}}" bindchange="timebindChange">
+         <text >当前的时间是：{{time}}</text>
+    </picker>
+</view> -->
+
+<!-- radio属性 -->
+<!-- <radio-group   bindchange='radioChange'>
+    <label wx:for='{{ items }}' wx:for-item='radioitem'>
+        <radio color="red" value='{{ radioitem.name }}' checked='{{radioitem.checked}}'>{{radioitem.value}}</radio>
+    </label>
+</radio-group > -->
+
+<!-- slider滑动器 -->
+
+<!-- <view>
+    <text> 设置slider</text>
+    <view>
+        <slider step='5' min='0' max='100'  value='23' show-value bindchange='bindChange'></slider>
+    </view>
+</view> -->
+
+<!-- swith是否被选中 -->
+<!-- <view>
+    <switch checked  bindchange="bindChange">选中</switch>
+    <switch   bindchange="bindChange">未选中</switch>
+</view> -->
+
+<!-- audio音频处理 -->
+<!-- <view>
+    <audio 
+    id="myAudio"
+    poster='{{poster}}'
+    name='{{name}}'
+    author='{{author}}'
+    src='{{src}}'
+    controls
+    loop='{{loop}}'
+    >
+    </audio>
+    <button type='primary' bindtap='audioPlay'>播放</button>
+    <button type='primary' bindtap='audioStop'>暂停</button>
+    <button type='primary' bindtap='audio14'>设置当前秒速播放</button>
+    <button type='primary' bindtap='audioStart'>重新播放</button>
+</view> -->
+
+<!-- 拍照camera -->
+
+<!-- <camera device-position='back' flash='auto' binderror='error' style="width: 100%; height: 300px;">
+</camera>
+<button type="primary" bindtap="takePhoto">拍照</button>
+<image mode="widthFix" src="{{src}}"></image>
+<view>预览</view> -->
+
+<!-- map组件 -->
+<map
+    id="map"
+    latitude="30.465711"
+    longitude="114.279125"
+    scale="14"
+    markers="{{markers}}"
+    enable-3D
+    show-compass
+    enable-scroll
+    style="width: 100%; height: 600px;"
+></map>

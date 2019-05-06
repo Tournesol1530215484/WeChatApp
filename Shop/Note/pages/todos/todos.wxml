@@ -1,0 +1,23 @@
+<!--pages/todos/todos.wxml-->
+<view class='content'>
+    <view class="adddo">
+        <image src='../../images/add.png' bindtap='addHadnle'></image>
+        <input type='text' value='{{ addinput }}' bindinput='inputHadnle'  placeholder="请输入要添加的内容" placeholder-class="dotext"></input>
+    </view>
+    <view class="catelist">
+        <view class="items" wx:for="{{todos}}" wx:for-item="todos">
+            <icon id="{{ index }}" type="{{ todos.status ? 'success' : 'circle' }}" bindtap='iconLeft'>/</icon> 
+            <text>{{ todos. content}}</text>
+            <icon type='clear'  id="{{ index }}" bindtap='iconright' ></icon>
+        </view>
+    </view>
+    <view class="clean" wx:if="{{ show }}">
+        <text bindtap='selectHadnle'>全选</text>
+        <text >以选择{{ contens }}项</text>
+        <text bindtap='clearHadnle'>清空</text>
+    </view>
+
+      <view class="show" wx:if="{{ !show }}">
+        <text >暂无数据</text>
+    </view>
+</view>

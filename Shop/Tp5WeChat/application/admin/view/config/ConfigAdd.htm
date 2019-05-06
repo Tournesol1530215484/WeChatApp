@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html><head>
+	    <meta charset="utf-8">
+    <title>ThinkPHP5.0</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__ADMIN__/style/bootstrap.css" rel="stylesheet">
+    <link href="__ADMIN__/style/font-awesome.css" rel="stylesheet">
+    <link href="__ADMIN__/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__ADMIN__/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="__ADMIN__/style/demo.css" rel="stylesheet">
+    <link href="__ADMIN__/style/typicons.css" rel="stylesheet">
+    <link href="__ADMIN__/style/animate.css" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- 头部 -->
+    {include file="public/header"/}
+    <!-- /头部 -->
+	
+	<div class="main-container container-fluid">
+		<div class="page-container">
+            <!-- Page Sidebar -->
+            {include file="public/left"/}
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li><a href="#">系统配置</a></li>
+                        <li><a href="#">配置项列表</a></li>
+                        <li class="active">添加配置项</li>
+                    </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+                <!-- Page Body -->
+                <div class="page-body">
+    <div class="row">
+        <div class="col-lg-12 col-sm-12 col-xs-12">
+            <form class="form-horizontal" role="form" action="" method="post">
+            <div class="widget">
+
+                <div class="tabbable">
+                    <ul class="nav nav-tabs nav-justified">
+                        <li class="tab-danger active">
+                            <a data-toggle="tab" href="#JustifiedTab-1" aria-expanded="true">基本信息设置</a>
+                        </li>
+                        <li class="tab-success">
+                            <a data-toggle="tab" href="#JustifiedTab-2" aria-expanded="false">附件设置</a>
+                        </li>
+                        <li class="tab-info">
+                            <a data-toggle="tab" href="#JustifiedTab-3" aria-expanded="false">其他设置</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content ">
+                        <div class="tab-pane active" id="JustifiedTab-1">
+                            <div class="form-group">
+                                <label for="sort" class="col-sm-2 control-label no-padding-right">排序</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control" id="sort" placeholder="" name="sort" value="2" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="sort" class="col-sm-2 control-label no-padding-right">排序</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control" id="sort" placeholder="" name="sort" value="2" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="JustifiedTab-2">
+                            <div class="form-group">
+                                <label for="sort" class="col-sm-2 control-label no-padding-right">排序</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control" id="sort" placeholder="" name="sort" value="2" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="JustifiedTab-3">
+                            <div class="form-group">
+                                <label for="sort" class="col-sm-2 control-label no-padding-right">排序</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control" id="sort" placeholder="" name="sort" value="2" type="text">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">保存信息</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+            </form>
+        </div>
+    </div>
+
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+		</div>	
+	</div>
+
+	    <!--Basic Scripts-->
+    <script src="__ADMIN__/style/jquery_002.js"></script>
+    <script src="__ADMIN__/style/bootstrap.js"></script>
+    <script src="__ADMIN__/style/jquery.js"></script>
+    <!--Beyond Scripts-->
+    <script src="__ADMIN__/style/beyond.js"></script>
+    
+
+
+</body></html>

@@ -1,0 +1,33 @@
+<!--pages/text/text.wxml-->
+<view class='container'>
+    <view class='list-content' wx:for="{{ content }}">
+        <view class='author'>
+            <image src="{{ item.face }}"></image>
+            <text>{{ item.name }}</text>
+        </view>
+        <view class='content'>
+            <text>{{ item.title }}</text>
+            <video src='{{ item.video }}' show-mute-btn poster="{{ item.face }}"></video>
+        </view>
+        <view class='comment-text'>
+            <text>好笑 {{ item.joke }}</text>
+            <text>·</text>
+            <text>评论 {{ item.comment }}</text>
+            <text>·</text>
+            <text>分享 {{ item.share }}</text>
+        </view>
+        <view class='comment-img'>
+            <view class='comment-img-left'>
+                <image src='/images/smile.png'></image>
+                <image src='/images/cry.png'></image>
+                <image src='/images/comment.png'></image>
+            </view>
+            <view class='comment-img-right'>
+                <image src='/images/shar.png'></image>
+            </view>
+        </view>
+
+    </view>
+
+
+</view>

@@ -1,0 +1,228 @@
+/**index.wxss**/
+.page{
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑"；
+}
+
+/* search  begin */
+.search{
+    display: flex;
+}
+.search-left{
+    padding-left: 14rpx;
+    flex: 4;
+    position: relative;
+}
+.search-left image{
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    padding-top: 6rpx;
+    padding-left: 10rpx;
+
+}
+.search-left input{
+    border: 2rpx solid #ccc;
+    background: #def754;
+    border-radius:14rpx;
+    padding-left: 50rpx;
+    font-family: '楷体'
+}
+.search-right{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    font-size: 24rpx;
+    padding: 0 20rpx;
+
+}
+.clock{
+    flex: 1;
+}
+.clock-img{
+    padding-left: 4rpx;
+}
+.down{
+    flex: 1;
+}
+.down-img{
+     padding-left: 4rpx;
+}
+
+/* search end */
+
+/* nav  begin */
+
+.nav{
+    padding: 10rpx;
+    display: flex;
+    justify-content: space-around;
+    font-family: "黑体";
+    font-size: 36rpx;
+}
+.nav-check{
+    color: #def754;
+    border-bottom: 2rpx solid #def754;
+}
+/* nav end */
+
+/* center begin */
+    /* 滚动条 */
+.center-swip image{
+    width: 750rpx;
+    height: 400rpx;
+}
+
+    /* 大分类 */
+.cate{
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+     padding-bottom: 10rpx;
+    /* padding-left:  50rpx; */
+
+
+}    
+.cate-item{
+    text-align: center;
+    flex: 25%;
+    font: 24rpx;
+    font-family: "黑体";
+    padding-top: 10rpx;
+}
+.cate-img image{
+    text-align: center;
+    width: 60rpx;
+    height: 60rpx;
+}
+
+/* 电台列表 */
+.song{
+    border-top: solid #ccc 4rpx;
+     border-bottom: solid #ccc 4rpx;
+      border-radius:10rpx;
+}
+.song-tiitle{
+    padding: 10rpx 0;
+    display: flex;
+    justify-content: center;
+    font-size: 24rpx;
+    border-bottom: solid #ccc 2rpx;
+
+}
+.song-tiitle image{
+    padding-left: 10rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.song-cent{
+    padding-top: 10rpx;
+    padding-left:  10rpx;
+    display: flex;
+}
+.song-left{
+    flex: 2;
+}
+.song-left image{
+    width: 140rpx;
+    height: 140rpx;
+}
+.song-right{
+    flex: 6;
+    border-bottom: solid #ccc 2rpx;
+}
+.s-top text{
+    font-family: "黑体";
+    font-size: 32rpx;
+}
+.s-mid{
+    padding-top: 10rpx;
+    display: flex;
+}
+.s-mid image{
+    width: 36rpx;
+    height: 36rpx;
+}
+
+.s-foot{
+    display: flex;
+    justify-content: space-between;
+}
+.sf-left{
+     text-align: center;
+}
+.sf-left image{
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 25rpx;
+}
+.sf-left text{
+   
+    font-size: 28rpx;
+    color: #ccc;
+    padding-left: 20rpx;
+
+}
+.sf-right image{
+    padding-right: 20rpx;
+     width: 40rpx;
+    height: 40rpx;
+}
+
+/* center end */
+
+/* play  begin */
+.play{
+    display: flex;
+    background: #def754;
+    /* justify-content: space-between; */
+}
+.play-left{
+    padding-left: 20rpx;
+    flex: 4;
+    display: flex;
+}
+.pl-right{
+    filter: 3;
+}
+.pl-head{
+    padding-top: 10rpx;
+    flex: 1;
+}
+
+.pl-head image{
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 60rpx;
+}
+.pl-ltop{
+    padding-top: 10rpx;
+    font: 28rpx;
+    color: #fff;
+    font-family: "黑体";
+}
+.pl-lfoot{
+    padding-top: 10rpx;
+     font-family: "黑体";
+}
+.play-right{
+    flex: 2;
+    display: flex;
+    text-align: center;
+    padding: 20rpx 20rpx 20rpx 20rpx;
+}
+.pr-left image{
+    width: 80rpx;
+    height: 80rpx;
+}
+
+.pr-right image{
+    padding-left: 20rpx;
+    width: 80rpx;
+    height: 80rpx;
+}
+
+

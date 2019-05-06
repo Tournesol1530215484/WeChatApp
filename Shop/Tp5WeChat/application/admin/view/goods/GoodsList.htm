@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+   <title>111</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__ADMIN__/style/bootstrap.css" rel="stylesheet">
+    <link href="__ADMIN__/style/font-awesome.css" rel="stylesheet">
+    <link href="__ADMIN__/style/weather-icons.css" rel="stylesheet">
+    <link rel="icon" href="__FAICON__/favicon.ico" type="image/x-icon" />
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__ADMIN__/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="__ADMIN__/style/demo.css" rel="stylesheet">
+    <link href="__ADMIN__/style/typicons.css" rel="stylesheet">
+    <link href="__ADMIN__/style/animate.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- 头部 -->
+{include file='public/header'/}
+
+<!-- /头部 -->
+
+<div class="main-container container-fluid">
+    <div class="page-container">
+        <!-- Page Sidebar -->
+        {include file='public/left'/}
+        <!-- /Page Sidebar -->
+        <!-- Page Content -->
+        <div class="page-content">
+            <!-- Page Breadcrumb -->
+            <div class="page-breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="#">系统</a>
+                    </li>
+                    <li class="active">商品列表</li>
+                </ul>
+            </div>
+            <!-- /Page Breadcrumb -->
+
+            <!-- Page Body -->
+            <div class="page-body">
+                <!--<button type="button" tooltip="添加商品" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = 'ArticleAdd'"> <i class="fa fa-plus"></i> Add</button>-->
+                <form  name="action" class="form-horizontal" role="form"  method="post" enctype="multipart/form-data" action="">
+                    <div style="float: left"><button class="btn shiny  " type="submit" name="action" value="del_all" onclick="del_all()" style="margin:10px"><i class="fa fa-trash-o"></i> 批量删除</button>  </div>
+                    <div style="float: left;margin-top: 10px" ><button type="button"  class="btn shiny " onClick="javascript:window.location.href = '{:url('Goods/GoodsAdd')}'"><i class="fa fa-plus"></i> 添加商品</button>  </div>
+                    <div style="float: left">
+                        <div class="input-icon icon-left input-group-sm" style="width: 150px;float: left;margin: 10px">
+                            <input class="form-control input-sm"   name="keywords" value="" type="text" >
+                            <i class="glyphicon glyphicon-search blue"></i>
+                        </div>
+                        <span class="graded label label-success" style="margin-top: 15px;padding-right: 15px">关键字</span>
+                    </div>
+                    <div style="float: left">
+                        <button class="btn shiny  " type="submit" value="select" id="select" onclick="select()" style="margin:10px">查询</button>
+                    </div>
+
+                    <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-xs-12">
+                        <div class="widget">
+                            <div class="widget-body">
+                                <div class="flip-scroll">
+                                    <table class="table table-bordered table-hover">
+                                        <thead class="">
+                                        <tr>
+                                            <th class="text-center">名称</th>
+                                            <th class="text-center">编号</th>
+                                            <th class="text-center">缩略图</th>
+                                            <th class="text-center">当前价</th>
+                                            <th class="text-center">市场价</th>
+                                            <th class="text-center">是否在售</th>
+                                            <th class="text-center">所属栏目</th>
+                                            <!--<th class="text-center">品牌</th>-->
+                                            <!--<th class="text-center">类型</th>-->
+                                            <th class="text-center">库存</th>
+                                            <th class="text-center">销量</th>
+                                            <th class="text-center" width="20%">操作</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {volist name="Goods" id="GoodsRes"}
+                                        <tr>
+                                            <td align="center"><?php echo mb_substr($GoodsRes['goods_name'],0,6,'utf-8').'...';?></td>
+                                            <td align="center">{$GoodsRes.goods_code}</td>
+                                            <td align="center">
+                                                {if condition="$GoodsRes.og_thumb eq ''" }
+                                                    暂无缩略图
+                                                {else\}
+                                                    <img src="UPLOADS/{$GoodsRes.og_thumb}" style="width:50px; height: 30px;">
+                                                {/if}
+                                           </td>
+                                            <td align="center">{$GoodsRes.marke_price}</td>
+                                            <td align="center">{$GoodsRes.shop_price}</td>
+                                            <td align="center">
+                                                {if condition="$GoodsRes.on_sale eq 0"}
+                                                <span style="color: red">否</span>
+                                                {else/}
+                                                <span>是</span>
+                                                {/if}
+                                                </td>
+                                            <td align="center">
+                                                {if condition="$GoodsRes.category_id eq 0 "}
+                                               <span style="color: red"> 未分类</span>
+                                                {else\}
+                                                {$GoodsRes.cate_name}
+                                                {/if}
+                                            </td>
+
+                                             <td align="center">{$GoodsRes.stock}</td>
+                                            <td align="center">
+                                                {$GoodsRes.volume}
+                                            </td>
+                                            <td align="center">
+                                                <a href="{:url('StockList',array('id'=>$GoodsRes.id))}" class="btn btn-primary btn-sm Azure">
+                                                    <i class="fa fa-briefcase"></i>库存
+                                                </a>
+                                                <a href="{:url('GoodsEdit',array('id'=>$GoodsRes.id))}" class="btn btn-primary btn-sm shiny">
+                                                    <i class="fa fa-edit"></i> 编辑
+                                                </a>
+                                                <a href="#" onClick="warning('确实要删除吗', '{:url('GoodsDel',array('id'=>$GoodsRes.id))}')" class="btn btn-danger btn-sm shiny">
+                                                    <i class="fa fa-trash-o"></i> 删除
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        {/volist}
+                                        </tbody>
+                                    </table>
+                                    <div style="margin-top: 20px;float: right">
+                                        {$Goods->render()}
+                                    </div>
+                                </div>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- /Page Body -->
+        </div>
+        <!-- /Page Content -->
+    </div>
+</div>
+
+<!--Basic Scripts-->
+<script src="__ADMIN__/style/jquery_002.js"></script>
+<script src="__ADMIN__/style/bootstrap.js"></script>
+<script src="__ADMIN__/style/jquery.js"></script>
+<!--Beyond Scripts-->
+<script src="__ADMIN__/style/beyond.js"></script>
+
+
+
+</body></html>
