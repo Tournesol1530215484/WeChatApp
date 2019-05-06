@@ -1,0 +1,195 @@
+/* pages/shopCate/shopCate.wxss */
+page{
+    width: 100%;
+    height: 100%;
+}
+.outer{
+      width: 100%;
+    height: 100%;
+}
+
+.emptycart{
+    /* display: none; */
+}
+
+.img{
+    width: 100%;
+    height: 60%;
+    /* display: flex; */
+    text-align: center; 
+}
+.img image{
+    margin:80rpx 0rpx;
+    width: 300rpx;
+    height: 300rpx;
+}
+.img text{
+    display: block;
+    color: #999;
+}
+
+.btn {
+     width: 500rpx;
+     background-color:#ff9900;
+     color: #fff ;
+}
+
+/* 购物车有数据的时候 */
+
+.foolcart{
+    width: 100%;
+    height: 100%;
+}
+
+.topcart{
+    height: 100rpx;
+    width: 100%;
+    background-color: #ff9900;
+    color: #fff;
+    text-align: center;
+    /* text-align: center; */
+    /* border:  solid 2rpx blue; */
+    /* display: flex; */
+}
+
+/* .toptex1{
+    line-height: 80rpx;
+    display: block;
+    font-size: 26rpx;
+    flex: 1;
+} */
+.toptex2{
+     line-height: 80rpx;
+    display: block;
+    font-size: 40rpx;
+     /* flex: 2; */
+}
+
+.cenIterm{
+    padding-top: 10rpx;
+    width: 100%;
+    height: 200rpx;
+    border-bottom:  dashed  2rpx #ccc;
+    display: flex;
+}
+
+.cenleft{
+    flex: 3;
+    height: 100%;
+    display: flex;
+    
+}
+.cenleft
+.yuan{
+    /* flex: 1; */
+    width: 40rpx;
+    height: 40rpx;
+   margin:  auto 0;
+}
+.tou{
+    flex: 3;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rpx;
+    
+}
+.cenright{
+    flex: 5;
+    position: relative;
+    height: 100%;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+}
+
+
+.cenrt1{
+    font-family: '微软雅黑';
+    font-size: 32rpx;
+}
+.cenrri{
+    display: flex;
+    text-align: center;
+    padding-top:50rpx;
+    justify-content: space-between
+}
+.fu{
+    position: absolute;
+    margin-left: 400rpx;
+    margin-top: 10rpx;
+}
+.fu image{
+    width: 40rpx;
+    height: 40rpx;
+    
+}
+#price{
+    display: block;
+    color: red;
+   
+}
+.cenbtom{
+    border: 2rpx saddlebrown solid;
+    height: 60rpx;
+    width: 30%;
+    border-radius: 10rpx;
+    display: flex;
+    padding-right: 20rpx;
+}
+.disabled{
+    color: #ccc
+}
+
+#rm{
+    border-right: 2rpx solid #ccc;
+    padding: 0  10rpx  0 10rpx;
+}
+.cenbtom input{
+    text-align: center;
+    line-height: 60rpx;
+    height: 60rpx;
+}
+#ad{
+    border-left: 2rpx solid #ccc;
+    padding: 0  0rpx  0 0rpx;
+}
+
+.footer{
+    width: 100%;
+    height: 120rpx;
+    display: flex;
+    border-top: 2rpx solid #ccc;
+    justify-content: space-between;
+}
+.fleft{
+    flex: 1;
+    margin: auto 0;
+}
+.fleft image{
+    width: 40rpx;
+    height: 40rpx;
+}
+.fright{
+    flex: 3;
+    display: flex;
+    justify-content: flex-start;
+   
+}
+.fright text{
+    float: 1;
+    display: block;
+    width: 100%;
+     text-align: center;
+     margin:auto 0;
+     font-size: 32rpx;
+    /* line-height: 120rpx;
+    text-align: center; */
+}
+.fright button{
+      float: 1;
+    height: 100%;
+    width: 100%;
+    color: #fff;line-height: 120rpx;
+    text-align: center;
+    background-color: #ff0000; 
+    /* border-radius: 60rpx; */
+}

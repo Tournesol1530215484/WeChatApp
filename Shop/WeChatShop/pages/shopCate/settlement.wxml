@@ -1,0 +1,33 @@
+<!--pages/shopCate/settlement.wxml-->
+<view class='outer'>
+    <view class='addres'>
+       <view class='ip'>
+             <image src='/../images/adress.png'></image>
+       </view>
+        <view class='info'>
+            <text>收件人：{{ Addres.consignee }}</text>
+            <text>收货地址：{{ Addres.addres }}</text>
+            <text>联系电话：{{ Addres.phone }}</text>
+        </view>    
+        <view class='rif'>
+            <image src='/../images/rjt.png'></image>
+        </view>
+    </view>
+
+    <view class='goods-item' wx:for="{{ CarGoods }}">
+        <image src='{{ item.og_thumb }}'></image>
+        <view class='ttp'>
+            <view class='title'>{{ item.goods_name }}</view>
+            <view class='btom'>
+                <text id="price">￥ {{ item.shop_price }}</text>
+                <text id="num">x {{ item.num }}</text>
+            </view>
+        </view>    
+    </view>
+
+    <view class='price'>总价：￥ {{ totalprice }}</view>
+
+    <view class='btn'>
+        <button bindtap='suborder'>提交订单</button>
+    </view>
+</view>

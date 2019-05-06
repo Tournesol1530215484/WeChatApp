@@ -1,0 +1,58 @@
+/* pages/about/addres/addres.wxss */
+page{
+    height: 100%;
+    width: 100%;
+}
+.outer{
+     height: 100%;
+    width: 100%;
+}
+.item-list{
+    padding-top:20rpx;
+    padding-left:20rpx;
+    padding-right:20rpx;
+    height: 160rpx;
+    width: 100%;
+    border-bottom: dashed 2rpx #ccc;
+}
+.top-list{
+    height: 60rpx;
+    width: 100%;
+    display: flex
+}
+.top-list text{
+    font-weight: 800;
+    width: 40%;
+    /* flex: 2; */
+}
+
+.top-list image{
+         text-align: right;
+        width: 40rpx;
+        height: 40rpx;
+}
+.btom-list{
+    padding-top: 10rpx;
+      height: 60rpx;
+    width: 100%;
+    display: flex
+}
+.btom-list text{
+     width: 80%;
+     font-size: 30rpx;
+}
+.btom-list image{
+    padding-left: 8rpx;
+     text-align: right;
+        width: 34rpx;
+        height: 34rpx;
+}
+.btn{
+    padding-top: 40rpx;
+}
+.btn button{
+     width: 500rpx;
+     background-color:#ff9900;
+     color: #fff ;
+}
+

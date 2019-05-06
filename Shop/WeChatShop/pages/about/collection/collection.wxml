@@ -1,0 +1,37 @@
+<!--pages/about/collection/collection.wxml-->
+<view class='outer'>
+    <view class='title'>我的收藏</view>
+    <view class='cellection'>
+
+        <view wx:if="{{ Emptycollection }}" class="emp">
+            <view class='imgs'>
+                <!-- <image src=''></image> -->
+                <text>您还没有收藏任何商品</text>
+            </view>
+            <view >
+                <button class='btn' bindtap='jumpIndex'>去逛逛</button>
+            </view>
+        </view>
+
+        <view wx:if="{{ !Emptycollection }}" class='item-cell' wx:for="{{ Goods }}">
+            <view class='img'>
+                <image data-gid='{{ item.id }}' bindtap='Rmcollection' src='/images/cha.png'></image>
+            </view>
+            <view class='item-cell-left'>
+                <image src='{{item.og_thumb}}'></image>
+            </view>
+
+            <view class='item-cell-right'>
+                <view class='ttl'>
+                     <text>{{ item.goods_name }}</text>
+                </view>
+                <view class='ttr'>
+                    <text class='p1'>￥ {{ item.shop_price }}</text>
+                    <text class='p2'>>>详情</text>
+                </view>    
+            </view>
+        
+        </view>
+    </view>
+
+</view>

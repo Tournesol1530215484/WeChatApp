@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<!-- 导航栏 -->
+<view class='nav'>
+    <swiper  indicator-dots="{{ indicatorDots }}"  indicator-color="{{ indicatorcolor }}" indicator-active-color="{{ indicatoractivecolor }}" 
+            autoplay="{{ autoplay }}"  interval="{{ interval }}" duration="{{ duration }}" >
+        <swiper-item wx:for="{{ imgUrls }}"> 
+                <image src='{{ item.images }}'> </image>
+                
+        </swiper-item>
+    </swiper>
+</view>
+
+<!-- cate大分类 -->
+<view class="cate">
+        <view class="clist-left">
+            <image mode='{{Fill}}' src='http://120.79.207.238/WeChat/ceshi/etz.png'></image>
+        </view>
+        <view class="clist-right">
+            <image mode='{{Fill}}' class='ccl'  src='http://120.79.207.238/WeChat/ceshi/nrz.png'></image>
+            <image mode='{{Fill}}' src='http://120.79.207.238/WeChat/ceshi/nanrz.png'></image>
+        </view>
+</view>
+
+<!-- 最新商品 -->
+<view class='nG-title'><text>最新商品</text></view>
+<view class="goodslist" > 
+        <view class="goodIitems"  wx:for="{{ Goods }}">
+                <view class='goodsimg'><image mode='{{ Fill }}'  src='{{ item.url }}'></image></view>
+                <view class='goodsinfo'><text>{{ item.goodsname }}</text>
+                    <view class='goodsprice'>
+                        <text>￥{{ item.price }}</text>
+                        <view wx:if="{{ item.status }}">
+                            <image src="/images/scs.png"></image>
+                        </view>
+                        <view wx:else>
+                            <image src="/images/sc.png"></image>
+                        </view>
+                    </view>
+                </view>    
+        </view>     
+</view>

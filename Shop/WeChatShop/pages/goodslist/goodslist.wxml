@@ -1,0 +1,32 @@
+<!--pages/goodslist/goodslist.wxml-->
+<!--pages/goodslist/goodslist.wxml-->
+<view class='outer'>
+    <scroll-view class="nav" scroll-x>
+        <block wx:for="{{ TopCate }}">
+         <navigator wx:if="{{ item.id == CId }}" url="goodslist?gid={{ item.id }}" class="navselect">{{ item.cate_name }}</navigator>
+         <navigator wx:else url="goodslist?gid={{ item.id }}" >{{ item.cate_name }}</navigator>
+        </block>
+    </scroll-view>
+
+   
+   <!-- 最新商品 -->
+ <view class="nG-title"><text>{{ Des }}</text></view>
+<view class="goodslist" > 
+        <view class="goodIitems"  wx:for="{{ Goods }}" >
+                <view class='goodsimg' data-cid='{{ item.id }}' bindtap='goodsInfo'><image mode='{{ Fill }}'  src='{{ item.og_thumb }}'></image></view>
+                <view class='goodsinfo'><text>{{ item.goods_name }}</text>
+                    <view class='goodsprice'>
+                        <text>￥{{ item.marke_price }}</text>
+                        <view wx:if="{{ item.status }}">
+                            <image src="/images/scs.png"></image>
+                        </view>
+                        <view wx:else>
+                            <image src="/images/sc.png"></image>
+                        </view>
+                    </view>
+                </view>    
+        </view>
+    </view>
+    
+</view>
+

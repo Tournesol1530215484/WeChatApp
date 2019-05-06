@@ -1,0 +1,31 @@
+<view class='outer'>
+    <view class='title'>
+        <text >添加收货地址</text>
+    </view>
+
+    <form bindsubmit="formSubmit" bindreset="formReset">
+            <view class='Consignee'>
+                <text class='le'>收货人</text>
+                <input name="consignee" placeholder="请填入收货人"></input>
+            </view>
+
+            <view class='Consignee'>
+                <text class='le'>手机号码</text>
+                <input name="phone" placeholder="请填入收货手机号"></input>
+            </view>
+
+            <view class='Consignee'>
+                <text class='le'>详细地址</text>
+                <input name="addres" placeholder="请填入收货地址"></input>
+            </view>
+
+            <view class='check'>
+                <text class='le'>是否设置成默认</text>
+                <switch   name="check"></switch >            
+            </view>
+             <view class='btn'>
+                <button  form-type="submit">添加</button>
+            </view>
+    </form>                    
+
+</view>

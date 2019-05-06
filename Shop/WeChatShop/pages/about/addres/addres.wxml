@@ -1,0 +1,20 @@
+<!--pages/about/addres/addres.wxml-->
+<view class='outer'>
+    <view class="item-list" wx:for="{{ Addres }}">
+            <view class='top-list' >
+                    <text >{{ item.consignee }}</text>
+                    <text>{{ item.phone }}</text>
+                    <image data-adid='{{item.id  }}' bindtap='delddres' src='/../images/del.png'></image>
+                    <image  wx:if="{{  item.check ==1 }}" src='/../images/dui.png'></image>
+            </view>
+             <view class='btom-list'>
+                    <text>{{ item.addres }}</text>
+                    <image data-adid='{{item.id  }}' bindtap='editaddres' src='/../images/edit.png'></image>
+            </view>  
+    </view>
+
+    <view class='btn'>
+        <button bindtap='addAddres'>新增收货地址</button>
+    </view>
+
+</view>

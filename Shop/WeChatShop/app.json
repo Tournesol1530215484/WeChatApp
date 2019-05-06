@@ -1,0 +1,55 @@
+{
+    "pages": [
+        "pages/about/about",
+        "pages/shopCate/shopCate",
+        "pages/cate/cate",
+        "pages/goodslist/goodslist",
+        "pages/goods/goods",
+        "pages/index/index",
+        "pages/welcome/welcome",
+        "pages/logs/logs",
+        "pages/about/collection/collection",
+        "pages/about/addres/addres",
+        "pages/about/addres/addaddres",
+        "pages/about/addres/editaddres",
+        "pages/shopCate/settlement"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#ff9900",
+        "navigationBarTitleText": "Apollo商城",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "/images/index.png",
+                "selectedIconPath": "/images/indexs.png"
+            },
+            {
+                "pagePath": "pages/cate/cate",
+                "text": "分类",
+                "iconPath": "/images/special.png",
+                "selectedIconPath": "/images/specials.png"
+            },
+            {
+                "pagePath": "pages/shopCate/shopCate",
+                "text": "购物车",
+                "iconPath": "/images/empty_cart.png",
+                "selectedIconPath": "/images/carts.png"
+            },
+            {
+                "pagePath": "pages/about/about",
+                "text": "关于",
+                "iconPath": "/images/me.png",
+                "selectedIconPath": "/images/mes.png"
+            }
+        ],
+        "borderStyle": "white",
+        "color": "#fff",
+        "backgroundColor": "#000000"
+    },
+    "sitemapLocation": "sitemap.json"
+}

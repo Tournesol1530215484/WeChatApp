@@ -1,0 +1,80 @@
+/* pages/about/addres/addaddres.wxss */
+page{
+    width: 100%;
+    height: 100%;
+}
+.outer{
+       width: 100%;
+    height: 100%;
+}
+.title{
+    height: 80rpx;
+    text-align: center;
+     
+}
+.title text{
+    line-height: 80rpx;
+    font-size: 50rpx;
+    font-weight:600
+}
+
+.Consignee{
+    padding-top: 40rpx;
+    height: 80rpx;
+    text-align: left;
+    border-bottom: dashed 2rpx #ccc;
+    display: flex;
+}
+input::-webkit-input-placeholder {
+    /* placeholder颜色  */
+    color: #aab2bd;
+    /* placeholder字体大小  */
+    font-size: 12px;
+    /* placeholder位置  */
+    text-align: left;
+    line-height: 80rpx;
+}
+
+.le{
+    text-align: center;
+}
+.Consignee text{
+    display: block;
+    line-height: 80rpx;
+    flex: 1;
+}
+.Consignee input{
+    display: block;
+    line-height: 80rpx;
+    flex: 2;
+}
+.check{
+    
+    line-height: 120rpx;
+    display: flex;
+    text-align: center;
+    /* line-height: 80rpx; */
+}
+.check text{
+    padding-top: 20rpx;
+    display: block;
+    text-align: center;
+    line-height: 80rpx;
+    width: 400rpx;
+}
+/* .goods-item{
+    width: 100%;
+    height: 200rpx;
+    display:  flex;
+} */
+
+
+
+.btn{
+    padding-top: 40rpx;
+}
+.btn button{
+     width: 500rpx;
+     background-color:#ff9900;
+     color: #fff ;
+}

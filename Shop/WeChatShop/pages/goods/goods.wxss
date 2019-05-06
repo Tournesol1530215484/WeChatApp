@@ -1,0 +1,173 @@
+/* pages/goods/goods.wxss */
+page{
+    width: 100%;
+    height: 100%;
+}
+.outer{
+    width: 100%;
+    height: 100%;
+}
+.nav{
+    height: 700rpx;
+}
+.nav swiper{
+    height: 100%;
+}
+.nav swiper swiper-item image{
+    width: 100%;
+    height: 100%;
+}
+
+/* goodstitle  */
+
+.goodstitle{
+    height: 60rpx;
+    padding: 10rpx 0;
+    text-align: center;
+}
+
+.goodstitle text{
+    color: #999;
+}
+
+/* sellnum */
+.sellnum{
+    display: flex;
+    width: 100%;
+    height: 60rpx;
+}
+.sellnum text{
+    padding-left: 10rpx;
+}
+.left{
+    /* flex: 2; */
+    width: 60%;
+    /* border: 2rpx rgb(175, 130, 98) solid; */
+}
+#Sprice{
+    color: red;
+}
+#Yprice{
+    color: #ccc;
+    font-size: 28rpx;
+    text-decoration: line-through;
+    
+}
+#Xnum{
+    color: #ccc;
+    font-size: 28rpx;
+}
+.Sales{
+    border: 2rpx saddlebrown solid;
+    height: 60rpx;
+    width: 30%;
+    border-radius: 10rpx;
+    display: flex;
+    padding-right: 20rpx;
+}
+.disabled{
+    color: #ccc
+}
+#rm{
+    border-right: 2rpx solid #ccc;
+    padding: 0  16rpx  0 16rpx;
+}
+.Sales input{
+    text-align: center;
+    line-height: 60rpx;
+    height: 60rpx;
+}
+#ad{
+    border-left: 2rpx solid #ccc;
+    padding: 0  0rpx  0 10rpx;
+}
+
+
+/* details */
+
+.details{
+    width: 100%;
+    height: 100%;
+}
+.de-title{
+    padding-top: 40rpx;
+     padding-bottom: 20rpx;
+    display: flex;
+    justify-content: space-around;
+    height: 60rpx;
+    color: #666666;
+    /* border: saddlebrown solid 2rpx; */
+}
+.detail{
+    text-align: center;
+    width: 30%;
+    /* height: 100%; */
+}
+.aftersale{
+    text-align: center;
+    width: 30%;
+    color: #ff9900;
+    border-bottom: #ff9900 solid 2rpx;
+    
+}
+.swipers{
+    width: 100%;
+    
+}
+.swipers image{
+    width: 100%;
+}
+
+.shop{
+    margin-top:20rpx;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    /* border-top: 2rpx #ccc dashed */
+    
+}
+.sh-left{
+    flex: 1;
+    padding-top:10rpx; 
+    display: flex;
+     text-align: center;
+}
+.shl-index{
+    flex: 1;
+}
+.shl-index image{
+    margin: 0;
+    width: 50rpx;
+    height: 50rpx;
+}
+.shl-index  text{
+    display:block;
+}
+.shl-soucang{
+    flex: 1;
+}
+.shl-soucang text{
+    display:block;
+   
+}
+.shl-soucang image{
+      margin: 0;
+    width: 50rpx;
+    height: 50rpx;
+}
+.sh-center{
+    flex: 1;
+    background:#ff9900;
+    color: #ffffff;
+     padding-top:18rpx; 
+    line-height: 100rpx;
+    text-align: center;
+}
+.sh-right{
+      flex: 1;
+       padding-top:18rpx; 
+    background:#ff3333;
+    color: #ffffff;
+    line-height: 100rpx;
+    text-align: center;
+}

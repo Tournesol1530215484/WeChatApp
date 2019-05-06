@@ -1,0 +1,60 @@
+<!--pages/shopCate/shopCate.wxml-->
+<view class="outer">
+<view class='emptycart' wx:if="{{ emptyCart }}" >
+        <view class='img'>
+            <image src='/images/empty_cart.png'></image>
+            <text>您还没有选中任何商品</text>
+        </view>
+        <view >
+            <button class='btn' bindtap='jumpIndex'>去逛逛</button>
+        </view>
+</view>
+
+<view  class='foolcart' wx:if="{{ !emptyCart }}">
+        <view class='topcart'>
+            <!-- <text class='toptex1'></text> -->
+            <text class='toptex2'>购物车</text>
+        </view>
+   
+        <scroll-view scroll-y style="height:{{ windowHeight }}rpx">
+
+                <view class='cenIterm' wx:for="{{ Goods }}">
+                    <view class='cenleft'>
+                        <image class='yuan' wx:if="{{ item.selected ==1 }}" src='/images/dui.png'  data-index='{{ index }}' bindtap='Select'></image>
+                        <image class='yuan' wx:else src='/images/yuan.png' data-index='{{ index }}' bindtap='Select'></image>
+                        <image class='tou' src='{{item.og_thumb }}'></image>
+                    </view>
+                    <view class='cenright'>
+                        <view class="fu">
+                            <image data-index='{{ index }}' data-num='{{ item.num }}'  bindtap='delSales' src='/images/cha.png'></image>
+                        </view>
+                        <text class='cenrt1'>{{item.goods_name}}</text>
+                        <view class='cenrri'>
+                            <text id='price'> ￥ {{ item.shop_price }} </text>
+                            <view class='cenbtom'>
+                                <text id="rm" data-index='{{ index }}' data-num='{{ item.num }}' class="{{ SalesStatus }}" bindtap='rmSales'>-</text>
+                                <input value='{{ item.num }}' data-index='{{ index }}'  data-num='{{ item.num }}' bindinput='Changenum'></input>
+                                <text id="ad" data-index='{{ index }}'  data-num='{{ item.num }}' bindtap='addSales'>+</text>
+                            </view>
+                        </view>    
+                    </view>
+                </view>
+        </scroll-view>    
+
+        <view class="footer">
+            <view class='fleft'>
+                <image wx:if="{{ selectAll }}" src='/images/dui.png' bindtap='SelectAll'></image>
+                <image wx:else src='/images/yuan.png' bindtap='SelectAll'></image>
+                <text >全选</text>
+            </view>
+
+            <view class="fright">
+                <text>合计￥ {{ totalprice }}</text>
+                <button bindtap='Settlement'>立即结算</button>
+            </view>
+        </view>    
+
+</view>
+
+
+</view>

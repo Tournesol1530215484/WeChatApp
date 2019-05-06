@@ -1,0 +1,31 @@
+<view class='outer'>
+    <view class='title'>
+        <text >修改收货地址</text>
+    </view>
+
+    <form bindsubmit="formSubmit" bindreset="formReset">
+            <input hidden="true" name="id" value='{{ Addres.id }}'> </input>
+            <view class='Consignee'>
+                <text class='le'>收货人</text>
+                <input name="consignee" placeholder="请填入收货人" value='{{ Addres.consignee }}'></input>
+            </view>
+
+            <view class='Consignee'>
+                <text class='le'>手机号码</text>
+                <input name="phone" placeholder="请填入收货手机号" value='{{ Addres.phone }}'></input>
+            </view>
+
+            <view class='Consignee'>
+                <text class='le'>详细地址</text>
+                <input name="addres" placeholder="请填入收货地址" value='{{ Addres.addres }}'></input>
+            </view>
+            <view class='check'>
+                <text class='le'>是否设置成默认</text>
+                <switch   name="check" checked="{{ Addres.check =='1' ? 'true' : ''}}" > </switch >            
+            </view>
+             <view class='btn'>
+                <button  form-type="submit">修改</button>
+            </view>
+    </form>                    
+
+</view>

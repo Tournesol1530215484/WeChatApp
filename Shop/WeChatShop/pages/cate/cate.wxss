@@ -1,0 +1,73 @@
+/* pages/cate/cate.wxss */
+page{
+    height: 100%;
+    width: 100%;
+}
+.outer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.cate-left{
+    width: 20%;
+    height: 100%;
+    border-right:  4rpx solid #ccc;
+}
+.nselect{
+    text-align: center;
+    padding:20rpx  0  20rpx 0;
+    font-family: "宋体";
+    font-size: 36rpx;
+}
+.select{
+    color: #fff;
+    background-color: #ff9900;
+     border-right:  4rpx solid #ff9900;
+     border-radius: 8rpx;
+    text-align: center;
+    padding:20rpx  0  20rpx 0;
+    font-family: "宋体";
+    font-size: 36rpx;
+}
+
+/* catetitle */
+
+.catetitle{
+    width: 100%;
+    height: 5%;
+    text-align: center;
+    color: #ff9900;
+}
+
+
+/* cate-right */
+.cate-right{
+    width: 80%;
+    height: 100%;
+}
+.navbtn{
+    width: 100%;
+    height: 25%;
+    text-align: center;
+}
+.navbtn image{
+    padding-top: 8rpx;
+     width: 98%;
+     height: 95%;
+}
+.navlist{
+    display: flex;
+    flex-wrap:wrap;
+}
+.navlist-item{
+    width: 30%;
+    padding:10rpx;
+    text-align: center;
+}
+.navlist-item image{
+    width: 100%;
+}
+.navlist-item text{
+    font-size: 32rpx;
+    font-family: "宋体";
+}

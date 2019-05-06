@@ -1,0 +1,57 @@
+<!--pages/about/about.wxml-->
+<view class='outer'>
+    <view class='info' >
+        <!-- <image src='/images/face4.jpg'></image> -->
+        <open-data class='img' type="userAvatarUrl"></open-data>
+        <open-data class='tit' type="userNickName"></open-data> 
+        <!-- <text>Resuc</text> -->
+    </view>
+
+    <view class='status'>
+        <view class='statusinfo'>
+            <image src='/images/pay.png'></image>
+            <text>待支付</text>
+        </view>
+
+         <view class='statusinfo'>
+            <image src='/images/wait.png'></image>
+            <text>待收货</text>
+        </view>
+
+         <view class='statusinfo'>
+            <image src='/images/done.png'></image>
+            <text>已完成</text>
+        </view>
+
+    </view>
+
+    <view class='details'>
+        <view class='detailsinfo' wx:if="{{ ! loginstatus }}">
+            <image src='/images/pay.png'></image>
+           <button wx:if="1" style="type:hidden;" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">  授权登录</button> 
+            <view wx:else>请升级微信版本</view>
+        </view>
+
+         <view class='detailsinfo'>
+            <image src='/images/qb.png'></image>
+            <button>我的钱包</button>
+        </view>
+
+         <view class='detailsinfo'>
+            <image src='/images/done.png'></image>
+            <button>订单管理</button>
+        </view>
+
+        <view class='detailsinfo'>
+            <image src='/images/wait.png'></image>
+            <button bindtap='RecAddress'>收货地址管理</button>
+        </view>
+
+         <view class='detailsinfo'>
+            <image src='/images/shouc.png'></image>
+            <button bindtap='MyCollection'>我的收藏</button>
+        </view>
+    
+    </view>
+
+</view>

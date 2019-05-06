@@ -1,0 +1,79 @@
+<!--pages/goods/goods.wxml-->
+<view class='outer'>
+    <scroll-view scroll-y style="height :{{ height }}rpx;" >
+    <!-- 顶部轮播图 -->
+    <view class="nav">
+        <swiper indicator-dots autoplay  indicator-active-color="{{ indicatoractivecolor }}">
+            <label wx:for="{{ Ogphoto }}">
+                <swiper-item > 
+                    <image src='{{  item.og_photo }}'></image>
+            </swiper-item>
+            </label>
+        </swiper>
+    </view>
+
+    <!-- 商品标题 -->
+    <view class='goodstitle'>
+            <text>{{ GoodsInfo.goods_name }}</text>
+    </view>
+
+    <!-- 销售件数以及加减 -->
+    <view class="sellnum">
+       <view class='left'>
+            <text id='Sprice'>￥{{ GoodsInfo.shop_price }} </text>
+            <text id='Yprice'>￥{{ GoodsInfo.marke_price }} </text>
+            <text id='Xnum'>销量 {{ GoodsInfo.volume }} 件</text>
+       </view>
+        <view class="Sales ">
+            <text id="rm" class="{{ SalesStatus }}" bindtap='rmSales'>-</text>
+            <input value='{{ Sales }}'></input>
+            <text id="ad" bindtap='addSales'>+</text>
+        </view>
+    </view>
+
+    <!-- 详情和售后 -->
+    <view class='details' >
+        <view class='de-title'>
+            <view class='detail "{{ curren ? " " : "aftersale" }}" ' data-curent="0" bindtap='chageCuren'>详情</view>
+            <view class='detail "{{ curren ? "aftersale" : " " }}" ' data-curent="1" bindtap='chageCuren'>售后</view>
+        </view>
+        <!-- <swiper current="{{ curren }}" >
+            <swiper-item style="height:{{ GoodsInfo.big_thumb_height }}px">
+                <image mode='widthFix' src='{{ GoodsInfo.big_thumb }}'></image>
+            </swiper-item>
+            <swiper-item >
+                 <image mode='widthFix'  src='{{ GoodsInfo.big_thumb }}'></image>
+            </swiper-item>
+        </swiper> -->
+        <view class="swipers" style="height:{{ GoodsInfo.big_thumb_height }}px" wx:if="{{ curren }}">
+             <image mode='widthFix' src='{{ GoodsInfo.big_thumb }}'></image>
+         </view>
+          <view class="swipers" style="height:{{ GoodsInfo.big_thumb_height }}px" wx:else>
+             <image mode='widthFix' src='{{ GoodsInfo.big_thumb }}'></image>
+         </view>
+
+    </view>
+    </scroll-view >
+    <!-- 加入购物车与立即购买 -->
+
+    <view class="shop" >
+        <view class="sh-left">
+            <view class='shl-index'>
+                <image src='/images/kf.png'></image>
+                <text>客服</text>
+            </view>
+
+            <view class='shl-soucang'>
+                
+            <image wx:if="{{ status==-1 }}" data-goodsid='{{ GoodsInfo.id }}' bindtap='Collection' src='/images/sc.png'></image>
+            <image wx:else data-goodsid='{{ GoodsInfo.id }}' bindtap='Collection' src='/images/scs.png'></image>
+                <text>收藏</text>
+            </view>
+        </view>
+        <view class="sh-center" data-goodsid='{{ GoodsInfo.id }}' bindtap='AddtoCart' >加入购物车</view>
+        <view class="sh-right" data-goodsid='{{ GoodsInfo.id }}' bindtap='BuyNow' >立即购买</view>
+    
+    </view>
+
+
+</view>

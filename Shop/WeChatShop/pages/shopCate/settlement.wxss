@@ -1,0 +1,105 @@
+/* pages/shopCate/settlement.wxss */
+page{
+    width: 100%;
+    height: 100%;
+}
+.outer{
+    width: 100%;
+    height: 100%;
+}
+
+.addres{
+    height: 240rpx;
+    width: 100%;
+    display: flex;
+    background-color: #99cc99;
+}
+.ip{
+    flex: 1;
+    text-align: center;
+    height: 100%;
+}
+.ip image{
+    padding-top:75rpx;
+    width: 60rpx;
+    height: 60rpx;
+}
+.info{
+    flex: 8
+}
+.info text{
+    padding-top: 10rpx;
+    display: block;
+    font-size: 32rpx;
+    color: #fff ;
+}
+.rif{
+    flex: 1;
+    text-align: center;
+    height: 100%;
+}
+.rif image{
+     padding-top:80rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.goods-item{
+    width: 100%;
+    height: 200rpx;
+    display:  flex;
+    padding-top :20rpx;
+    padding-left :20rpx;
+    align-items: center;
+    border-bottom: 2rpx dashed #ccc;
+
+}
+
+.goods-item image{
+    width: 200rpx;
+    height: 200rpx;  
+}
+.ttp{
+      padding-left: 40rpx;
+}
+.title{
+   
+}
+/* .goods-item text{
+    width: 300rpx;
+    height: 80rpx;
+   display: block;
+} */
+.btom {
+     margin-top: 40rpx;
+     display: flex
+}
+#price{
+    color: red;
+    width: 280rpx;
+    display: block;
+    flex:2;
+}
+#num{
+    font-size: 28rpx;
+    text-align: right;
+    display: block;
+    flex: 1;
+}
+
+.price{
+    padding-top: 20rpx;
+    color: red;
+    padding-left: 400rpx;
+}
+
+
+.btn{
+    padding-top: 40rpx;
+}
+.btn button{
+     width: 500rpx;
+     background-color:#ff9900;
+     color: #fff ;
+}
+

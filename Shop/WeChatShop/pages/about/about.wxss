@@ -1,0 +1,99 @@
+/* pages/about/about.wxss */
+page{
+    width: 100%;
+    height: 100%;
+    /* background: #ccc; */
+}
+.outer{
+    width: 100%;
+    height: 100%;
+    /* background: #ccc; */
+}
+
+.info{
+    width: 100%;
+    height: 25%;
+    background-color: #ff9900;
+    text-align: center;
+    /* display: flex;
+    flex-direction: row; */
+    
+   
+}
+.img{
+    /* border: solid 3rpx cadetblue; */
+    display: block;
+    margin: 0 auto;
+    width: 160rpx;
+    height: 160rpx;
+    overflow: hidden;
+    border-radius: 80rpx;   
+}
+.tit{
+    padding-top: 10rpx;
+    display: block;
+} 
+
+.status{
+    width: 100%;
+    height: 20%;
+    background-color: #fff;
+    display: flex
+}
+.statusinfo {
+    height: 100%;
+    width: 33%;
+    text-align: center
+}
+
+.statusinfo image{
+    margin-top: 10rpx;
+    height: 120rpx;
+    width: 120rpx;
+}
+.statusinfo text{
+    display: block
+}
+
+.details{
+    width: 100%;
+    height: 55%;
+    /* background-color: rebeccapurple; */
+}
+
+.detailsinfo {
+    height: 100rpx;
+    width: 100%;
+    display: flex;
+  
+    border-bottom: 2rpx dashed  #ccc;
+}
+.detailsinfo button{
+    text-align: left;
+    background-color: #fff;
+    line-height: 100rpx;
+    font-size: 40rpx;
+    margin-left: 0rpx;
+   padding-left: 0rpx;
+
+     /* text-align: center; */
+
+}
+button::after {
+  border: none;
+  /* background-color: #fff; */
+  border-radius:0;
+  
+}
+
+.detailsinfo image{
+    padding: 30rpx 30rpx 30rpx 30rpx;
+    height: 60rpx;
+    width: 60rpx;
+}
+.detailsinfo text{
+    /* padding-left: 20rpx; */
+    font-size: 40rpx;
+    line-height: 100rpx;
+     text-align: center;
+}

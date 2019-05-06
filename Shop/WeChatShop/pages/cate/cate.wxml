@@ -1,0 +1,30 @@
+<!--pages/cate/cate.wxml-->
+<view class='outer'>
+    <view class='cate-left'>
+        <block wx:for="{{ Cate }}">
+            <view  wx:if="{{ item.id === Starst }}" class="select " data-id="{{ item.id }}" bindtap='ChangCate'>
+                <text> {{ item. cate_name}}</text>
+            </view>
+            <view  wx:else="{{ item.id === Starst }}" class="nselect"  data-id="{{ item.id }}"  bindtap='ChangCate'> 
+                <text>{{ item. cate_name}}</text>
+            </view>
+        </block>
+    </view>
+    <view class='cate-right'>
+        <view class="navbtn">
+            <image src='{{ CateInfo.images }}'></image>
+        </view>
+
+          <view class='catetitle'>
+            <text>——{{ CateInfo.cate_name }}——</text>
+        </view>
+
+        <view class='navlist'>
+            <view class="navlist-item" wx:for="{{ CateSonInfo }}">
+                 <image mode='widthFix' data-gid='{{ item.id }}' bindtap='goodslist' src='{{ item.images }}'></image>
+                 <text>{{ item.cate_name }}</text>
+            </view>
+        </view>
+    </view>
+
+</view>
